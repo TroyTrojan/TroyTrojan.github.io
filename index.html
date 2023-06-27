@@ -1,52 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>Parallax Scrolling Website</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header>
-    <a href="#" class="logo">Logo</a>
-    <ul>
-      <li><a href="#" class="active">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Work</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-  </header>
-  <section>
-    <img src="images/stars.png" id="stars">
-    <img src="images/moon.png" id="moon">
-    <img src="images/mountains_behind.png" id="mountains_behind">
-    <h2 id="text">Moon Light</h2>
-    <a href="#sec" id="btn">Explore</a>
-    <img src="images/mountains_front.png" id="mountains_front">
-  </section>
-  <div class="sec" id="sec">
-    <h2>Parallax Scrolling Effects</h2>
-    <p>(内容随意发挥)Lorem ipsum, dolor sit amet consectetur adipiscing elit. Vero iste laboriosam iusto sapiente voluptatum a. Lorem ipsum, dolor sit amet consectetur adipiscing elit. Vero iste laboriosam iusto sapiente voluptatum a. Lorem ipsum, dolor sit amet consectetur adipiscing elit. Vero iste laboriosam iusto sapiente voluptatum a.Lorem ipsum, dolor sit amet consectetur adipiscing elit. Vero iste laboriosam iusto sapiente voluptatum a.Lorem ipsum, dolor sit amet consectetur adipiscing elit. Vero iste laboriosam iusto sapiente voluptatum a.<br><br>Lorem ipsum, dolor sit amet consectetur adipiscing elit. Vero iste laboriosam iusto sapiente voluptatum a. Lorem ipsum, dolor sit amet consectetur adipiscing elit. Vero iste laboriosam iusto sapiente voluptatum a. Lorem ipsum, dolor sit amet consectetur adipiscing elit. Vero iste laboriosam iusto sapiente voluptatum a.<br><br>Lorem ipsum, dolor sit amet consectetur adipiscing elit. Vero iste laboriosam iusto sapiente voluptatum a. Lorem ipsum, dolor sit amet consectetur adipiscing elit. Vero iste laboriosam iusto sapiente voluptatum a. Lorem ipsum, dolor sit amet consectetur adipiscing elit. Vero iste laboriosam iusto sapiente voluptatum a.Lorem ipsum, dolor sit amet consectetur adipiscing elit. Vero iste laboriosam iusto sapiente voluptatum a.Lorem ipsum, dolor sit amet consectetur adipiscing elit. Vero iste laboriosam iusto sapiente voluptatum a.<br><br>Lorem ipsum, dolor sit amet consectetur adipiscing elit. Vero iste laboriosam iusto sapiente voluptatum a. Lorem ipsum, dolor sit amet consectetur adipiscing elit. Vero iste laboriosam iusto sapiente voluptatum a. Lorem ipsum, dolor sit amet consectetur adipiscing elit. Vero iste laboriosam iusto sapiente voluptatum a.<br><br>Lorem ipsum, dolor sit amet consectetur adipiscing elit. Vero iste laboriosam iusto sapiente voluptatum a. Lorem ipsum, dolor sit amet consectetur adipiscing elit. Vero iste laboriosam iusto sapiente voluptatum a. Lorem ipsum, dolor sit amet consectetur adipiscing elit. Vero iste laboriosam iusto sapiente voluptatum a.Lorem ipsum, dolor sit amet consectetur adipiscing elit. Vero iste laboriosam iusto sapiente voluptatum a.Lorem ipsum, dolor sit amet consectetur adipiscing elit. Vero iste laboriosam iusto sapiente voluptatum a.<br><br>Lorem ipsum, dolor sit amet consectetur adipiscing elit. Vero iste laboriosam iusto sapiente voluptatum a. Lorem ipsum, dolor sit amet consectetur adipiscing elit. Vero iste laboriosam iusto sapiente voluptatum a. Lorem ipsum, dolor sit amet consectetur adipiscing elit. Vero iste laboriosam iusto sapiente voluptatum a.</p>
-  </div>
+<html lang="zh_cn">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="og:title" property="og:title" content="Win11 made in React" />
+    <meta
+      name="og:description"
+      property="og:description"
+      content="Win11 made in React"
+    />
+    <meta name="og:color" content="#303030" />
+    <link rel="apple-touch-icon" href="/favicon.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="description" content="Win11 made in React" />
+    <title>Windows11</title>
+    <link rel="stylesheet" href="/dycalendar.css" />
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
 
-  <script>
-    let stars = document.getElementById('stars')
-    let moon = document.getElementById('moon')
-    let mountains_behind = document.getElementById('mountains_behind')
-    let text = document.getElementById('text')
-    let btn = document.getElementById('btn')
-    let mountains_front = document.getElementById('mountains_front')
-    let header = document.querySelector('header')
+    <span id="root"></span>
 
-    window.addEventListener('scroll', function(){
-      let value = window.scrollY;
-      stars.style.left = value * 0.25 + 'px'
-      moon.style.top = value * 1.05 + 'px'
-      mountains_behind.style.top = value * 0.5 + 'px'
-      mountains_front.style.top = value * 0 + 'px'
-      text.style.marginRight = value * 4 + 'px'
-      text.style.marginTop = value * 1.5 + 'px'
-      btn.style.marginTop = value * 1.5 + 'px'
-      header.style.top = value * 0.5 + 'px'
-    })
-  </script>
-</body>
+    <span id="brightoverlay"></span>
+
+    <script type="text/javascript" src="/dycalendar.js"></script>
+    <script src="./src/index.jsx" type="module"></script>
+    <script src="/react-pwa.js"></script>
+
+    <script type="module">
+      console.log(
+        "%cWin11React is a project by blueedgetechno and ascended by andrewstech. If you wish to help out with this project, visit https://github.com/blueedgetechno/win11React",
+        "color: lightblue; font-size: x-large"
+      );
+    </script>
+  </body>
 </html>
